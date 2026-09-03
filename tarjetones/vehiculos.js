@@ -18,6 +18,14 @@ window.VEHICULOS_LUCANIA = {
     modelo: "Aveo",
     anio: "2013",
     placas: "683-YRR"
-  }
+  },
+
+D102: {
+    acceso: "autorizado",
+    marca: "Hyundai ",
+    modelo: "i10 sedan", 
+    anio: "2017",
+    placas: "URL-679 -R
+  }  
   
 };
