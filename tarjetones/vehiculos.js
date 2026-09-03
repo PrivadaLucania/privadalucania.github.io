@@ -10,5 +10,14 @@ window.VEHICULOS_LUCANIA = {
     modelo: "Spark",
     anio: "2017",
     placas: "USX-423-H"
+  },
+  
+  C202: {
+    acceso: "suspendido",
+    marca: "Chevrolet",
+    modelo: "Aveo",
+    anio: "2013",
+    placas: "683-YRR"
   }
+  
 };
