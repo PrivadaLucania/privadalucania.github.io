@@ -13,7 +13,7 @@ window.VEHICULOS_LUCANIA = {
   },
   
   C202: {
-    acceso: "restringido",
+    acceso: "suspendido",
     marca: "Chevrolet",
     modelo: "Aveo",
     anio: "2013",
