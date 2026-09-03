@@ -11,9 +11,9 @@
 <body>
   <main class="contenedor">
     <header class="encabezado">
-      <p class="conjunto">MARINA TURQUESA</p>
+      <p class="conjunto">SEPTIEMBRE 2026</p>
       <h1>Privada Lucania</h1>
-      <h2>SEPTIEMBRE 2026</h2>
+      <P>Validación de Acceso Vehicular</P>
     </header>
 
     <section id="cargando" class="tarjeta estado-neutro" aria-live="polite">
@@ -81,7 +81,7 @@
       document.getElementById("icono").textContent = autorizado ? "✓" : "!";
       document.getElementById("estado").textContent = autorizado
         ? "ACCESO AUTORIZADO"
-        : "ACCESO SUSPENDIDO";
+        : "ACCESO RESTRINGIDO";
       document.getElementById("departamento").textContent = `Departamento ${clave}`;
       document.getElementById("vehiculo").textContent =
         [registro.marca, registro.modelo, registro.anio].filter(Boolean).join(" ");
