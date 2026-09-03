@@ -13,7 +13,7 @@
     <header class="encabezado">
       <p class="conjunto">MARINA TURQUESA</p>
       <h1>Privada Lucania</h1>
-      <p>Validación de acceso vehicular</p>
+      <h2>SEPTIEMBRE 2026</h2>
     </header>
 
     <section id="cargando" class="tarjeta estado-neutro" aria-live="polite">
@@ -88,7 +88,7 @@
       document.getElementById("placas").textContent = registro.placas;
       document.getElementById("mensaje").textContent = autorizado
         ? "El vehículo se encuentra registrado para ingresar a Privada Lucania."
-        : "No autorizar el acceso. Favor de comunicarse con la administración.";
+        : "Acceso restringido. Favor de comunicarse con la administración.";
 
       resultado.classList.add(autorizado ? "estado-autorizado" : "estado-suspendido");
       cargando.classList.add("oculto");
