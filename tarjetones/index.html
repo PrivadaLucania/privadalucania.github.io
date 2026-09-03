@@ -1,1 +1,99 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#198754">
+  <title>Validación vehicular | Privada Lucania</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <header class="encabezado">
+      <p class="conjunto">MARINA TURQUESA</p>
+      <h1>Privada Lucania</h1>
+      <p>Validación de acceso vehicular</p>
+    </header>
 
+    <section id="cargando" class="tarjeta estado-neutro" aria-live="polite">
+      <div class="icono">…</div>
+      <h2>Consultando registro</h2>
+    </section>
+
+    <section id="resultado" class="tarjeta oculto" aria-live="polite">
+      <div id="icono" class="icono"></div>
+      <p id="estado" class="estado"></p>
+      <h2 id="departamento"></h2>
+
+      <dl class="datos">
+        <div><dt>Vehículo</dt><dd id="vehiculo"></dd></div>
+        <div><dt>Placas</dt><dd id="placas" class="placas"></dd></div>
+      </dl>
+
+      <p id="mensaje" class="mensaje"></p>
+    </section>
+
+    <section id="error" class="tarjeta estado-error oculto" aria-live="polite">
+      <div class="icono">!</div>
+      <h2>Registro no localizado</h2>
+      <p id="detalle-error"></p>
+      <p>Solicite al conductor comunicarse con la administración de Privada Lucania.</p>
+    </section>
+
+    <footer>
+      <p>Registro digital vehicular · Privada Lucania</p>
+      <p class="aviso">La autorización mostrada está sujeta al protocolo de seguridad vigente.</p>
+    </footer>
+  </main>
+
+  <script src="vehiculos.js"></script>
+  <script>
+    (() => {
+      const cargando = document.getElementById("cargando");
+      const resultado = document.getElementById("resultado");
+      const error = document.getElementById("error");
+      const parametros = new URLSearchParams(window.location.search);
+      const clave = (parametros.get("departamento") || "")
+        .trim()
+        .toUpperCase()
+        .replace(/[^A-Z0-9]/g, "");
+
+      const mostrarError = (texto) => {
+        cargando.classList.add("oculto");
+        document.getElementById("detalle-error").textContent = texto;
+        error.classList.remove("oculto");
+      };
+
+      if (!clave) {
+        mostrarError("No se indicó un departamento en el enlace consultado.");
+        return;
+      }
+
+      const registro = window.VEHICULOS_LUCANIA?.[clave];
+      if (!registro) {
+        mostrarError(`No existe un vehículo registrado para el departamento ${clave}.`);
+        return;
+      }
+
+      const autorizado = registro.acceso === "autorizado";
+      document.title = `${clave} | Validación vehicular`;
+      document.getElementById("icono").textContent = autorizado ? "✓" : "!";
+      document.getElementById("estado").textContent = autorizado
+        ? "ACCESO AUTORIZADO"
+        : "ACCESO SUSPENDIDO";
+      document.getElementById("departamento").textContent = `Departamento ${clave}`;
+      document.getElementById("vehiculo").textContent =
+        [registro.marca, registro.modelo, registro.anio].filter(Boolean).join(" ");
+      document.getElementById("placas").textContent = registro.placas;
+      document.getElementById("mensaje").textContent = autorizado
+        ? "El vehículo se encuentra registrado para ingresar a Privada Lucania."
+        : "No autorizar el acceso. Favor de comunicarse con la administración.";
+
+      resultado.classList.add(autorizado ? "estado-autorizado" : "estado-suspendido");
+      cargando.classList.add("oculto");
+      resultado.classList.remove("oculto");
+    })();
+  </script>
+</body>
+</html>
