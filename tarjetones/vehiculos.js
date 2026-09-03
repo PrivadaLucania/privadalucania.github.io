@@ -25,7 +25,7 @@ D102: {
     marca: "Hyundai ",
     modelo: "i10 sedan", 
     anio: "2017",
-    placas: "URL-679 -R
+    placas: "URL-679-R"
   }  
   
 };
