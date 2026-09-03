@@ -12,7 +12,7 @@ window.VEHICULOS_LUCANIA = {
     placas: "USX-423-H"
   },
   
-  C202_Popietario: {
+  C202: {
     acceso: "restringido",
     marca: "Chevrolet",
     modelo: "Aveo",
