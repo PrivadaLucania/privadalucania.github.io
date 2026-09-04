@@ -26,6 +26,14 @@ D102: {
     modelo: "i10 sedan", 
     anio: "2017",
     placas: "URL-679-R"
-  }  
+  },
+
+D103: {
+    acceso: "autorizado",
+    marca: "Toyota ",
+    modelo: "prius", 
+    anio: "2015",
+    placas: "12 J 322"
+  }    
   
 };
