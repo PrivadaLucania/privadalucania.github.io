@@ -4,6 +4,14 @@
  * Valores admitidos en acceso: "autorizado" o "suspendido".
  */
 window.VEHICULOS_LUCANIA = {
+  A103: {
+    acceso: "autorizado",
+    marca: "Suzuki",
+    modelo: "Gran Vitara BoosterJet",
+    anio: "2023",
+    placas: "PCR-16-37"
+  },
+  
   B302: {
     acceso: "autorizado",
     marca: "Chevrolet",
