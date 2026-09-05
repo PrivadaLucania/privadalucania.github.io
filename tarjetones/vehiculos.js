@@ -11,6 +11,14 @@ window.VEHICULOS_LUCANIA = {
     anio: "2023",
     placas: "PCR-16-37"
   },
+
+  A302: {
+    acceso: "autorizado",
+    marca: "Nisan",
+    modelo: "Platina",
+    anio: "2005",
+    placas: "UVJ-430-N"
+  },
   
   B302: {
     acceso: "autorizado",
