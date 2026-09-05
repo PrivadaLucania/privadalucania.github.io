@@ -12,7 +12,7 @@ window.VEHICULOS_LUCANIA = {
     placas: "PCR-16-37"
   },
 
-  A302: {
+  A304: {
     acceso: "autorizado",
     marca: "Nisan",
     modelo: "Platina",
