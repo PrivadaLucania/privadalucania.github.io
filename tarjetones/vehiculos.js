@@ -37,11 +37,11 @@ window.VEHICULOS_LUCANIA = {
   },
   
   C202: {
-    acceso: "suspendido",
-    marca: "Chevrolet",
-    modelo: "Aveo",
-    anio: "2013",
-    placas: "683-YRR"
+    acceso: "autorizado",
+    marca: "Bejing",
+    modelo: "Baic",
+    anio: "2025",
+    placas: "UUU-416-M"
   },
 
 D102: {
