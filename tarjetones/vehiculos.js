@@ -19,6 +19,14 @@ window.VEHICULOS_LUCANIA = {
     anio: "2005",
     placas: "UVJ-430-N"
   },
+
+  B201: {
+    acceso: "autorizado",
+    marca: "Suzuki",
+    modelo: "Ciaz ",
+    anio: "2018",
+    placas: "UVJ-424-N"
+  },
   
   B302: {
     acceso: "autorizado",
